@@ -33,4 +33,5 @@ The main components of the application include:
 
 ![image](https://github.com/user-attachments/assets/ae7d56d7-76df-4c3b-9eb5-2a4adb29feed)
 
-![image](https://github.com/user-attachments/assets/351fd298-8f9a-4c8b-bf32-5dafe6a3804d)
+![image](https://github.com/user-attachments/assets/4cfb7798-d774-4bd8-885f-37dc45a44167)
+
