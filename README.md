@@ -26,3 +26,11 @@ The main components of the application include:
 - **User Authentication**: Handled by Flask-Login, allowing users to log in and out securely.
 - **Database Models**: Defined using Flask-SQLAlchemy to manage user data and transactions.
 - **Forms**: Created using WTForms for user input, with validation to ensure data integrity.
+
+![image](https://github.com/user-attachments/assets/bba6ad96-da6b-416b-be62-469e99e85469)
+
+![image](https://github.com/user-attachments/assets/6787fe98-4c84-46a8-b090-293c9a8c370a)
+
+![image](https://github.com/user-attachments/assets/ae7d56d7-76df-4c3b-9eb5-2a4adb29feed)
+
+![image](https://github.com/user-attachments/assets/351fd298-8f9a-4c8b-bf32-5dafe6a3804d)
