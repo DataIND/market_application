@@ -21,14 +21,11 @@ def market_page():
         p_item_object = Item.quert.filter_by(name=purchased_item).first()
 
         if p_item_object:
-            if current_user.can_purchase():
-
-                p_item_object.owner = current_user.id 
-                current_user.budget -= p_item_object.price
-                db.session.commit()
-                flash(f"Congratulations! you purchased {p_item_object.name} for {p_item_object.price}$" , category='sucess')
+            if current_user.can_purchase(p_item_object):
+                p_item_object.buy(current_user)
+                flash(f"Congratulations! You purchased {p_item_object.name} for {p_item_object.price}$", category='success')
             else:
-                flash("Unfortunately, you don't have enough money to purchase {p_item_object.name}" , category='danger')
+                flash(f"Unfortunately, you don't have enough money to purchase {p_item_object.name}!", category='danger')
 
             sold_item = request.form.get('sold_item')
             s_item_object = Item.query.filter_by(name=sold_item).first()
@@ -85,7 +82,8 @@ def login_page():
             login_user(attempted_user)
             flash(f'Sucess! you are logged in as : {attempted_user.username}', category='sucess')
             return redirect(url_for('market_page'))
-
+        else:
+            flash('Username and password are not match! Please try again', category='danger')
 
     return render_template('login.html',form=form)
 
